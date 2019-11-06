@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% block title %}<title>PañolContigo</title>{% endblock %}
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href= {% static 'css/styleWe.css' %}>
+  <link rel="icon" href={% static 'img/logo.jpg' %}> 
+  {% load static %}   
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <h1 class="duoc"><a href="index.html"><img src={% static 'img/logo.jpg' %} alt="logoduoc"></a></h1>
+        {% block sidebar %}
+        <ul>
+          <li><a href="http://127.0.0.1:8000/index">INICIO</a></li>
+          <li><a href="http://127.0.0.1:8000/info">INFORMACION</a></li>
+          <li><a href="http://127.0.0.1:8000/formulario">REGISTRO</a></li>
+          <li><a href="http://127.0.0.1:8000/galeria">GALERIA</a></li>
+          <li><a href="http://127.0.0.1:8000/we">Nosotros</a></li>
+        </ul>
+        {% endblock %}
+      </nav>
+    </div>
+  </header>
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  
+  
+  
+    <div class="section">
+        
+      
+      <div class="caja">
+          
+          <h1 class="titulo">Equipo de Trabajo</h1>
+        <div class="testimonial-pics">
+          <img src={% static 'img/p1.jpg' %} alt="test-1" class="active">
+          <img src={% static 'img/p3.jpeg' %} alt="test-2">
+          <img src={% static 'img/p2.jpg' %} alt="test-3">
+        </div>
+        <div class="contents">
+            
+          <div class="parrafo active" id="test-1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+            <span class="description">Esteban / itivan_tm</span>
+          </div>
+          
+          <div class="parrafo" id="test-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elimet, consectetur adipisicing eli t. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+            <span class="description">Camila / c_vmilaaaaaaaaaa</span>
+          </div>
+          <div class="parrafo" id="test-3">
+            <p>Lorem  similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+            <span class="description">Felipe / felipe_ordenes</span>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+      
+    
+
+    <script type="text/javascript">
+      $('.testimonial-pics img').click(function(){
+        $(".testimonial-pics img").removeClass("active");
+        $(this).addClass("active");
+
+        $(".parrafo").removeClass("active");
+        $("#"+$(this).attr("alt")).addClass("active");
+      });
+    </script>
+
+
+    
+  <div class="footer">
+
+    <div class="footer-icons">
+      <ul>
+        <li><a href="https://es-la.facebook.com/DuocUC/" target="blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.whatsapp.com/" target="blank"><i class="fa fa-whatsapp"></i></a></li>
+        <li><a href="https://cl.linkedin.com/company/duocuc" target="blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCnt0LJxzvDv1o4pOCOs143Q" target="blank"><i class="fa fa-youtube"></i></a></li>
+      </ul> 
+    </div>
+    <div class="footermenu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="info.html">Información</a></li>
+        <li><a href="formulario.html">Registro</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="we.html">Nosotros</a></li>
+      </ul>
+    </div>
+
+    <div class="footermenudos">
+      <ul>
+        <li><a href="https://campusvirtual.duoc.cl/webapps/login/">AVA</a></li>
+        <li><a href="https://ssoprd.duoc.cl/auth/realms/WEB_APPS_PRD/protocol/openid-connect/auth?client_id=411f013c&nonce=478fd98899982560d93588527f22895e&redirect_uri=https%3A%2F%2Fexperienciavivo.duoc.cl%2Fauth%2Fopenidc%2Fcallback&response_type=code&scope=openid&state=40c84005a94b35133dddd082aee3aa6f">Alumno</a></li>
+        <li><a href="http://www.duoc.cl/biblioteca/">Biblioteca</a></li>
+        <li><a href="http://www.duoc.cl/pd/login">Docente</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footerbajo">
+    <p>DWYM 2DO SEMESTRE 2019<a href="https://www.duoc.cl/carrera/ingenieria-en-informatica"> Duoc UC Sede Maipú</a></p>
+  </div>
+  {% block content %}{% endblock %}
+</body>
+</html>

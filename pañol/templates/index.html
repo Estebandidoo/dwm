@@ -1,29 +1,32 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>PañolContigo</title>
+  {% block title %}<title>PañolContigo</title>{% endblock %}
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="styleBase.css">
-  <link rel="icon" href="img/logo.jpg">
-         
-    
+  <link rel="stylesheet" href= {% static 'css/styleBase.css' %}>
+  <link rel="icon" href={% static 'img/logo.jpg' %}> 
+  {% load static %}
 </head>
+
 <body> 
   <header>
     <div class="container">
       <nav>
-        <h1 class="duoc"><a href="index.html"><img src="img/logo.jpg" alt="logoduoc"></a></h1>
+        <h1 class="duoc"><a href="index.html"><img src={% static 'img/logo.jpg' %} alt="logoduoc"></a></h1>
+        {% block sidebar %}
         <ul>
-          <li><a href="index.html">INICIO</a></li>
-          <li><a href="info.html">INFORMACIÓN</a></li>
-          <li><a href="formulario.html">REGISTRO</a></li>
-          <li><a href="galeria.html">GALERIA</a></li>
-          <li><a href="we.html">Nosotros</a></li>
+          <li><a href="http://127.0.0.1:8000/index">INICIO</a></li>
+          <li><a href="http://127.0.0.1:8000/info">INFORMACION</a></li>
+          <li><a href="http://127.0.0.1:8000/formulario">REGISTRO</a></li>
+          <li><a href="http://127.0.0.1:8000/galeria">GALERIA</a></li>
+          <li><a href="http://127.0.0.1:8000/we">Nosotros</a></li>
         </ul>
+        {% endblock %}
       </nav>
     </div>
   </header>
@@ -47,19 +50,19 @@
           <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
-            <img src="img/img1.jpg" alt="duoc">
+            <img src={% static 'img/img1.jpg' %} alt="duoc">
           </div>
           <div class="item">
-            <img src="img/img2.jpg" alt="duoc">
+            <img src={% static 'img/img2.jpg' %} alt="duoc">
           </div>
           <div class="item">
-            <img src="img/img3.jpg" alt="duoc">
+            <img src={% static 'img/img3.jpg' %} alt="duoc">
           </div>
           <div class="item">
-            <img src="img/img4.jpg" alt="duoc">
+            <img src={% static 'img/img4.jpg' %} alt="duoc">
           </div>
           <div class="item">
-            <img src="img/img5.jpg" alt="duoc">
+            <img src={% static 'img/img5.jpg' %} alt="duoc">
           </div>
         </div>
     
@@ -100,7 +103,7 @@
         
       </div>
       <br>
-      <a href="https://www.duoc.cl/deportes"><img class="info2" src="img/info2.jpg" alt="logoduoc" height="200px" width="700px"></a>
+      <a href="https://www.duoc.cl/deportes"><img class="info2" src={% static 'img/info2.jpg' %} alt="logoduoc" height="200px" width="700px"></a>
       <br><br><br><br>
       <h1 class="titulosP">VIDEOS DE INFORMACIÓN</h1>
       <br>
@@ -146,6 +149,7 @@
   <div class="footerbajo">
     <p>DWYM 2DO SEMESTRE 2019<a href="https://www.duoc.cl/carrera/ingenieria-en-informatica"> Duoc UC Sede Maipú</a></p>
   </div>
+  {% block content %}{% endblock %}
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>

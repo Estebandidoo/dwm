@@ -19,9 +19,16 @@ from django.urls import include
 from django.conf.urls.static import static
 from django.conf import settings
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-	path ('pañol/', include('pañol.urls')),
+    path ('pañol/', include('pañol.urls')),
+	path ('', include('pañol.urls')),
+    path ('index/', include('pañol.urls')),
+    path ('info/', include('pañol.urls')),
+    path ('formulario/', include('pañol.urls')),
+    path ('galeria/', include('pañol.urls')),
+    path ('we/', include('pañol.urls')),
 ]
 
 urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
