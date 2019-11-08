@@ -11,20 +11,17 @@ class Pañol(models.Model):
 	Fecha = models.CharField(max_length=200)
     
 	def __str__(self):
-		return self.title 
+		return self.Nombre 
+		self.save()
     
-	def get_absolute_url(self):
-		"""Returns the url to access a detail record for this book."""
-		return reverse('Pañol-detail', args=[str(self.id)])
-
-
 class Persona(models.Model):
-    nombre = models.CharField(max_length=50)
-    apellidos = models.CharField(max_length=70)
-    email = models.EmailField()
-    contraseña = models.CharField(max_length=50)
+    Nombre = models.CharField(max_length=50)
+    Apellidos = models.CharField(max_length=70)
+    Email = models.CharField(max_length=200)
+    Contraseña = models.CharField(max_length=50)
     #fecha = models.DateTimeField(auto_now_add=true)
     
     def __str__(self):
-        return self.nombre
+        return self.Nombre
+	
 
