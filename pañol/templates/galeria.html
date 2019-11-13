@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,8 +34,7 @@
     </div>
   </header>
 
-  
-
+ 
     <div class="swiper-container">
       <br>
         <h2 class="titulo">
@@ -115,8 +115,7 @@
         <div class="swiper-pagination"></div>
     </div>
 
-
-    <script type="text/javascript" src="js/swiper.min.js"></script> 
+    <script type="text/javascript" src={% static 'js/swiper.min.js' %}></script> 
     <script>
         var swiper = new Swiper('.swiper-container', {
           effect: 'coverflow',
@@ -179,6 +178,6 @@
   <div class="footerbajo">
     <p>DWYM 2DO SEMESTRE 2019<a href="https://www.duoc.cl/carrera/ingenieria-en-informatica"> Duoc UC Sede Maipú</a></p>
   </div>
-  {% endblock %}
+
 </body>
 </html>
