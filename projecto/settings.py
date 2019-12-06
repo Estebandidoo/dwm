@@ -25,7 +25,7 @@ SECRET_KEY = '!x1rv*1*0sw!58ah=7(^pw$z1-5(nozbns^-d%q(0+ndet5n$9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["duoc.pythonanywhere.com"]
 
 
 # Application definition
@@ -121,4 +121,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#STATIC_ROOT = "/home/duoc/dwm/static"
 STATICFILES_DIRS = [ 'static' ]
