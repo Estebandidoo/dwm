@@ -10,4 +10,5 @@ urlpatterns = [
   path('formulario/',views.formulario,name='formulario'),
   path('galeria/',views.galeria,name='galeria'),
   path('we/',views.we,name='we'),
+  path('loginvista/',views.loginvista, name='loginvista'),
 ]

@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .models import Pañol,Persona
 from django.views import generic
 
+
+
 def index(request):
     return render(request, 'index.html')
 
@@ -16,3 +18,9 @@ def galeria(request):
 
 def we(request):
     return render(request, 'we.html')
+	
+def loginvista(request):
+    return render(request, 'loginvista.html')
+	
+def formulario2(request):
+    return render(request, 'formulario2.html')

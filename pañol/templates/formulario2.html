@@ -1,0 +1,39 @@
+{% load static %}
+{% block content %}
+    <main>
+        <center>
+                <div class="formulario">   
+                  
+                        <h2 style="color: white">Registrar usuario</h2>
+        
+                        <form method="POST" style="color: white;">
+                            {{ form.as_p }}
+                            {% csrf_token %}
+                            <button class="button" type="submit">Registrar</button>
+                        </form>
+                        
+                        <hr />
+                        <br>                 
+                        <a class="button" href="/login">Iniciar sesión</a>
+                        <br>
+                        <br>
+                </div>
+
+
+        </center>
+       
+
+    
+                   
+                  
+                  
+                
+               
+            </form>
+            <script src="{% static 'js/formulario.js' %}"></script>
+            <script src="{% static 'js/letras.js' %}"></script>
+            <script src="{% static 'js/mostrar.js' %}"></script>
+            <script src="{% static 'js/confirmar.js' %}"></script>
+            
+        </main>
+{% endblock %}
