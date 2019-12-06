@@ -25,7 +25,7 @@ SECRET_KEY = '!x1rv*1*0sw!58ah=7(^pw$z1-5(nozbns^-d%q(0+ndet5n$9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["duoc.pythonanywhere.com"]
+ALLOWED_HOSTS = ["dwm.pythonanywhere.com"]
 
 
 # Application definition
@@ -122,5 +122,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#STATIC_ROOT = "/home/duoc/dwm/static"
+#STATIC_ROOT = "/home/dwm/dwm/static"
 STATICFILES_DIRS = [ 'static' ]
